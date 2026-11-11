@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "season": "2026-27",
+    "updated_utc": null,
+    "source": "Pending first successful NBA stats refresh",
+    "rows": 0,
+    "teams": 0,
+    "note": "No live data yet. Run the GitHub Actions workflow to populate."
+  },
+  "players": [],
+  "defense": []
+}
