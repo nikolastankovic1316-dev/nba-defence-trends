@@ -67,7 +67,7 @@ def main():
     positions = get_roster_positions()
     logs["PLAYER_ID"] = logs["PLAYER_ID"].astype(str)
     logs["position"] = logs["PLAYER_ID"].map(positions).fillna("Unknown")
-    logs["opponent"] = logs["MATCHUP"].astype(str).str.extract(r"(?:vs\\.|@)\\s*([A-Z]{2,3})$", expand=False)
+    logs["opponent"] = logs["MATCHUP"].astype(str).str.extract(r"(?:vs\.|@)\s*([A-Z]{2,3})$", expand=False)
     logs["GAME_DATE"] = pd.to_datetime(logs["GAME_DATE"], errors="coerce")
     logs = logs.dropna(subset=["GAME_DATE", "opponent"])
     for col in ["PTS", "REB", "AST", "FG3M", "MIN"]:
